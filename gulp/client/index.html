@@ -18,6 +18,24 @@
             <div class="logo-wrap flex">
                 <img src="images/logo-light.png" alt="" class="logo">
             </div>
+            <button class="cmn-toggle-switch cmn-toggle-switch__htx"><span>toggle menu</span></button>            
+            <ul class="menu--ad flex flex--column">
+                <li>Menu</li>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Как это работает</a></li>
+                <li><a href="#">Лорем</a></li>
+                <li><a href="#">Вернуть средства</a></li>
+                <li><a href="#">Регистрация</a></li>
+                <li><a href="#">Вход</a></li>
+                <li>
+                    <div class="lang-wrap flex">
+                        <select class="lang uppercase">
+                            <option>RU</option>
+                            <option>EN</option>
+                        </select>
+                    </div>
+                </li>
+            </ul>
             <div class="menu-wrap flex">
                 <ul class="menu flex flex--row">
                     <li><a href="#">Главная</a></li>
@@ -43,30 +61,42 @@
     </header>
     <div class="pg__info">
         <div class="container">
-            <div class="pg__title uppercase">МЫ ПРИВЛЕКАЕМ К ОТВЕТСТВЕННОСТИ SCRUM ICO И ВОЗВРАЩАЕМ К ПОТЕРЯННЫЕ ДЕНЬГИ</div>
-            <div class="pg__text uppercase">ПЕРВЫЙ ГРУППОВОЙ ИСК БУДЕТ ПОДАН КОГДА СОБЕРЕТСЯ 500 ЗАЯВОК</div>
-            <div class="line">
-                <div class="line__in">332...</div>
-            </div>
-            <a href="#" class="money-btn uppercase">ВЕРНУТЬ СРЕДСТВА</a>
-            <a href="#" class="news-btn flex flex--row"><img src="images/teleg.png" alt=""><p>Следите за новостями о нас в нашем телеграм-канале</p></a>
+            <div class="double flex flex--row">
+                <div class="left">
+                    <div class="pg__title uppercase">МЫ ПРИВЛЕКАЕМ К ОТВЕТСТВЕННОСТИ</div>
+                    <div class="pg__text uppercase">SCRUM ICO И ВОЗВРАЩАЕМ К ПОТЕРЯННЫЕ ДЕНЬГИ</div>
+                    <a href="#" class="money-btn uppercase">ВЕРНУТЬ СРЕДСТВА</a>
+                    <a href="#" class="news-btn flex flex--row"><img src="images/telegram2.png" alt=""><p>Следите за новостями о нас в нашем телеграм-канале</p></a>
+                </div>
+                <div class="right flex flex--column">
+                    <a href="#" class="line__video"><img class="img--full" src="images/Bitcoin-12.png" alt=""></a>
+                    <div class="line flex flex--row">
+                        <div class="line__in"></div>
+                        <div class="line__number">450</div>
+                    </div>
+                    <div class="line__text">ПЕРВЫЙ ГРУППОВОЙ ИСК БУДЕТ ПОДАН КОГДА СОБЕРЕТСЯ 500 ЗАЯВОК</div>
+                </div>
+            </div>                
         </div>
     </div>
     <div class="work">
         <div class="container">
             <div class="work__title">Как это работает?</div>
-            <div class="work__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+            <!--<div class="work__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>-->
             <div class="work__units flex flex--row">
                 <div class="unit">
-                    <div class="unit__title uppercase">СТАНЬТЕ ПОЛЬЗОВАТЕЛЕМ<img src="images/n1.png" alt="" class="unit__number"></div>
+                    <img src="images/g1.png" alt="" class="unit__number">
+                    <div class="unit__title uppercase">СТАНЬТЕ ПОЛЬЗОВАТЕЛЕМ</div>
                     <div class="unit__text">Регистрируйтесь, чтобы стать пользователем системы. Это займет у вас несколько минут и это абсолютно бесплатно</div>
                 </div>
                 <div class="unit">
-                    <div class="unit__title uppercase">ДОКУМЕНТАЦИЯ<img src="images/n2.png" alt="" class="unit__number"></div>
+                    <img src="images/g2.png" alt="" class="unit__number">
+                    <div class="unit__title uppercase">ДОКУМЕНТАЦИЯ</div>
                     <div class="unit__text">Предоставьте необходимые документы для инициации процесса возврата средств</div>
                 </div>
                 <div class="unit">
-                    <div class="unit__title uppercase">КОММУНИКАЦИЯ И КОЛЛАБОРАЦИЯ<img src="images/n3.png" alt="" class="unit__number"></div>
+                    <img src="images/g3.png" alt="" class="unit__number">
+                    <div class="unit__title uppercase">КОММУНИКАЦИЯ И КОЛЛАБОРАЦИЯ</div>
                     <div class="unit__text">Оставляйте отзывы и делитесь информацией. Больше информации - больше шансов на возврат средств. Помогите другим избежать участия в scum ICO</div>
                 </div>
             </div>        
@@ -194,7 +224,7 @@
                     <div class="form__title flex flex--row"><img src="images/ic_mail_outline_24px.png" alt=""><p>Подпишитесь на рассылку новостей</p></div>
                     <div class="form__text">Еженедельные последние новости, аналитика и передовые советы по поиску работы.</div>
                     <div class="input__wrap flex flex--row">
-                        <input class="input--text" type="text">
+                        <input placeholder="Введите Ваш Email" class="input--text" type="text">
                         <div class="input--sbm"><img src="images/ic_compare_arrows_24px.png" alt=""></div>
                     </div>
                 </form>
@@ -202,6 +232,10 @@
         </div>
         <div class="bott">© 2019 Fraudico Ltd. Все права защищены.</div>
     </footer>
+    <div class="form-success">
+        <img src="images/close.png" alt="">Спасибо!<br>
+        Мы ответим Вам с самое ближайшее время.
+    </div>
     <script src="js/libs.min.js"></script>
     <script src="js/common.js"></script>
 </body>

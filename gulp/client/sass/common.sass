@@ -50,11 +50,51 @@ a, a:hover, a:active
   margin: 0 7.3vw
 .uppercase
   text-transform: uppercase
+.img--full
+  width: 100%
+  height: 100%
+.double
+  align-items: flex-end
 /**/
 .nav
   height: 4.48vw
   box-shadow: 0 .156vw .31vw rgba(0,0,0,.16)
   justify-content: space-between
+  position: relative
+.menu--ad
+  display: none
+  position: absolute
+  width: 48.6vw
+  top: 0
+  left: 0
+  padding: 0 0 7.2vw
+  background-color: #202020
+  color: #fff
+  font-size: 2.2vw
+  line-height: 2.2vw
+  .lang-wrap
+    padding: 0
+    border: none
+    background-color: #202020
+    .lang, option
+      font-size: 2.2vw
+      line-height: 2.2vw
+      padding-left: 6.1vw
+      -webkit-background-size: 1.3vw .88vw
+      background-size: 4.1vw 2.8vw
+      background-color: #202020
+      color: #666666
+  a, a:hover, a:active
+    display: block
+    padding: 1.9vw 10.2vw
+    color: #fff
+    font-size: 2.2vw
+    line-height: 2.2vw
+  li
+    border-bottom: 1px solid #707070
+  li:first-child, li:last-child
+    text-align: center
+    padding: 1.9vw 10.2vw
 .logo-wrap, .menu-wrap, .lang-wrap, .user-wrap
   align-items: center
 .logo-wrap
@@ -84,40 +124,61 @@ a, a:hover, a:active
   background-image: url(../images/ru.png)
   background-size: 1.3vw .88vw
   background-repeat: no-repeat
-  background-position: 0 0
+  background-position: 0 0  
 .pg__info
-  padding: 14.8vw 0 4.3vw
-  background-image: url(../images/bg.png)
+  padding: 23.9vw 0 4.9vw
+  background-color: #000
+  background-image: url(../images/bg.jpg)
   background-size: 100% 100%
   color: #fff
   a, a:hover, a:active
     color: #fff
   .money-btn
-    margin-bottom: 9.33vw
+    margin-bottom: 4.3vw
+    background-color: #191F22
+    font-size: .83vw
+    line-height: .83vw
+    padding: 1.19vw 1.87vw
+    margin-left: 1.87vw
 .pg__title
   font-size: 2.6vw
   line-height: 3.1vw
-  width: 54.9vw
-  font-weight: bold
-  margin-bottom: 3.9vw
+  font-family: 'ArialBlack'
+  width: 30.9vw
+  margin-bottom: .93vw
 .pg__text
-  font-size: .83vw
-  line-height: 1.1vw
+  font-size: 1.56vw
+  line-height: 1.56vw
+  margin-bottom: 2.8vw
+.line__video
+  display: block
+  width: 31.3vw
+  height: 15.5vw
+  align-self: center
   margin-bottom: 1.5vw
 .line
-  width: 35.1vw
+  width: 32.1vw
   background-color: #fff
   border-radius: 1.19vw
-  margin-bottom: 1.5vw
+  margin-bottom: 1.45vw
+  justify-content: space-between
+  align-items: center
 .line__in
-  width: 64.8%
-  text-align: left
-  font-size: 1.3vw
-  line-height: 1.5vw
-  padding: .36vw 1.9vw .39vw
-  box-sizing: border-box
-  background-color: #2A41E8
+  width: 85.7%
+  height: 1.6vw
+  background: #ffffff  
+  background: linear-gradient(to right, #707070 0%, #000000 50%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#707070', endColorstr='#000000',GradientType=1 )
   border-radius: 1.19vw
+.line__number
+  font-size: 1vw
+  line-height: 1vw
+  padding-right: .93vw
+  color: #000
+.line__text
+  font-size: .83vw
+  line-height: 1.3vw
+  font-weight: bold
 .money-btn
   display: block
   width: fit-content
@@ -134,14 +195,15 @@ a, a:hover, a:active
   font-size: .83vw
   line-height: 1vw
   img
-    width: 4.58vw
+    width: 1.9vw
+    margin-right: .67vw
 .work
-  padding: 7vw 0 5.9vw
+  padding: 9.7vw 0 12.1vw
   text-align: center
 .work__title
   font-size: 2vw
   line-height: 3vw
-  margin-bottom: 2.2vw
+  margin-bottom: 6.8vw
 .work__text
   font-size: 1vw
   line-height: 1.3vw
@@ -150,41 +212,44 @@ a, a:hover, a:active
 .work__units
   justify-content: space-between
   align-items: flex-start
+  padding: 0 5.2vw
 .unit
-  width: 20.7vw
+  width: 23.9vw
+  padding: 2.6vw 1.56vw
+  cursor: pointer
+  &:hover    
+    box-shadow: 0 .52vw .78vw rgba(45,65,232,.16)
 .unit__title
   font-size: 1vw
   line-height: 1vw
-  padding-bottom: .83vw
-  border-bottom: .15vw solid #2A41E8
-  position: relative
-  margin-bottom: .59vw
+  margin-bottom: 1.4vw
 .unit__number
-  position: absolute
-  bottom: 0
-  left: 100%
-  width: 2.38vw
+  width: 10.4vw
+  margin-bottom: 2.7vw
 .unit__text
   color: #808080
   font-size: .83vw
   line-height: 1vw
 .cards
-  padding: 2.8vw 0 4.5vw
+  background-image: url(../images/2.png)
+  background-size: 100% 100%
+  padding: 8vw 0 9.1vw
   text-align: left
   background-color: #F9F9F9
-  margin-bottom: 5.1vw
   .money-btn
     margin: 0 auto
 .cards__title
   font-size: 2.3vw
   line-height: 2.6vw
   margin-bottom: 1.6vw
+  color: #fff
+  font-weight: bold
 .cards__text
   width: 57.5vw
   font-size: 1vw
   line-height: 1.5vw
   margin-bottom: 2.3vw
-  color: #808080
+  color: #fff
 .cards__wrap
   justify-content: space-between
   align-items: flex-start
@@ -194,15 +259,19 @@ a, a:hover, a:active
   width: 27.5vw
   box-shadow: 0 .156vw .31vw rgba(0,0,0,.16)
   margin-bottom: 1.5vw
-  background-color: #F9F9F9
+  border-radius: .57vw
+  background-color: #2A41E8
 .card__info
   padding: 2.1vw 2.1vw 1.56vw
   background-color: #fff
+  border-top-left-radius: .57vw
+  border-top-right-radius: .57vw
   img
     width: 14.6vw
     height: 4.6vw
 .cat-date__wrap
   padding: 1.3vw 4.8vw 1.7vw
+  color: #fff
 .card__category
   margin-bottom: .88vw
 .card__category, .card__date
@@ -297,4 +366,116 @@ footer
   text-align: center
   font-size: .93vw
   line-height: 1.56vw
+.form-success
+  padding: 2.7vw 10.6vw 2.3vw 6.6vw
+  background-color: #303030
+  border: 1px solid #707070
+  border-radius: 1.2vw
+  width: fit-content
+  font-size: 1vw
+  line-height: 1.5vw
+  color: #fff
+  position: fixed
+  top: 30%
+  left: 50%
+  transform: translateX(-50%)
+  img
+    position: absolute
+    width: 1.25vw
+    top: .83vw
+    right: .83vw
+    cursor: pointer
+//Hmburger menu
+.cmn-toggle-switch
+  display: none
+  position: relative
+  overflow: hidden
+  margin: 0
+  padding: 0
+  width: 20px
+  height: 16px
+  font-size: 0
+  appearance: none
+  box-shadow: none
+  border-radius: none
+  border: none
+  cursor: pointer
+  transition: background 0.3s
+  box-sizing: content-box
+  padding: 4px
+  border-radius: 1px
+  background-color: #F2F2F2
+
+.cmn-toggle-switch:focus 
+  outline: none 
+
+.cmn-toggle-switch span 
+  display: block
+  position: absolute
+  width: 20px
+  margin: 0 auto
+  left: 0
+  right: 0
+  height: 2px
+  border-radius: 2px
+  background: #707070
+
+.cmn-toggle-switch span:before,
+.cmn-toggle-switch span:after 
+  position: absolute
+  display: block
+  left: 0
+  width: 100%
+  height: 2px
+  border-radius: 2px
+  background-color: #707070
+  content: "" 
+
+.cmn-toggle-switch span:before 
+  top: -5px 
+
+.cmn-toggle-switch span:after 
+  bottom: -5px 
+
+/**
+ * Style 2
+ *
+ * Hamburger to "x" (htx). Takes on a hamburger shape, bars slide
+ * down to center and transform into an "x".
+ */
+.cmn-toggle-switch__htx 
+  background-color: #F2F2F2
+
+.cmn-toggle-switch__htx span 
+  transition: background 0 0.3s 
+
+.cmn-toggle-switch__htx span:before,
+.cmn-toggle-switch__htx span:after
+	transition-duration: 0.3s, 0.3s
+	transition-delay: 0.3s, 0 
+
+.cmn-toggle-switch__htx span:before 
+  transition-property: top, transform
+
+.cmn-toggle-switch__htx span:after 
+  transition-property: bottom, transform
+
+/* active state, i.e. menu open */
+.cmn-toggle-switch__htx.active
+  background-color: #F2F2F2
+
+.cmn-toggle-switch__htx.active span
+  background: none
+
+.cmn-toggle-switch__htx.active span:before
+  top: 0
+  transform: rotate(45deg)
+
+.cmn-toggle-switch__htx.active span:after
+  bottom: 0
+  transform: rotate(-45deg)
+
+.cmn-toggle-switch__htx.active span:before,
+.cmn-toggle-switch__htx.active span:after
+	transition-delay: 0, 0.3s
 @import "media"
