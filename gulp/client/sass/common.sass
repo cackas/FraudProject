@@ -58,6 +58,7 @@ a, a:hover, a:active
 /**/
 .nav
   height: 4.48vw
+  background-color: #2A2A2A
   box-shadow: 0 .156vw .31vw rgba(0,0,0,.16)
   justify-content: space-between
   position: relative
@@ -72,6 +73,7 @@ a, a:hover, a:active
   color: #fff
   font-size: 2.2vw
   line-height: 2.2vw
+  z-index: 1
   .lang-wrap
     padding: 0
     border: none
@@ -105,9 +107,14 @@ a, a:hover, a:active
 .menu a
   font-size: 1vw
   line-height: 1.4vw
+  color: #F8F8F8
+  &:hover, &:active
+    color: #2A41E8
 .menu
-  width: 49vw
+  //width: 49vw
   justify-content: space-between
+.menu li
+  margin-right: 3vw
 .lang-wrap
   padding: 0 1.9vw
   border-left: 1px solid #E0E0E0
@@ -126,30 +133,41 @@ a, a:hover, a:active
   background-repeat: no-repeat
   background-position: 0 0  
 .pg__info
-  padding: 23.9vw 0 4.9vw
+  position: relative
+  padding: 18.75vw 0 1.4vw
   background-color: #000
-  background-image: url(../images/bg.jpg)
+  background-image: url(../images/bg-2.jpg)
   background-size: 100% 100%
   color: #fff
   a, a:hover, a:active
     color: #fff
   .money-btn
-    margin-bottom: 4.3vw
-    background-color: #191F22
-    font-size: .83vw
-    line-height: .83vw
-    padding: 1.19vw 1.87vw
-    margin-left: 1.87vw
+    margin-bottom: 11.4vw
+    &:hover
+      color: #000
 .pg__title
-  font-size: 2.6vw
-  line-height: 3.1vw
+  font-size: 4.1vw
+  line-height: 5.2vw
   font-family: 'ArialBlack'
-  width: 30.9vw
   margin-bottom: .93vw
 .pg__text
-  font-size: 1.56vw
+  font-size: 2vw
   line-height: 1.56vw
-  margin-bottom: 2.8vw
+  margin-bottom: 2.1vw
+  color: #87888C
+.group
+  position: absolute
+  bottom: 1.4vw
+  right: 8.9vw
+  align-items: center
+  img
+    width: 17.5vw
+.group__title
+  color: #E9E9E9
+  text-align: right
+  font-size: .83vw
+  line-height: 1.3vw
+  width: 17.3vw
 .line__video
   display: block
   width: 31.3vw
@@ -188,8 +206,12 @@ a, a:hover, a:active
   font-size: .73vw
   line-height: .73vw
   color: #fff
-  &:hover, &:active
-    color: #fff
+  transition: all .3s
+  &:hover
+    background-color: #fff
+    color: #2A41E8
+  &:active
+    transform: translateY(5%)
 .news-btn
   align-items: center
   font-size: .83vw
@@ -200,6 +222,23 @@ a, a:hover, a:active
 .work
   padding: 9.7vw 0 12.1vw
   text-align: center
+  position: relative
+.gov
+  position: absolute
+  width: 8vw
+.gov--1
+  top: 0
+  left: 1.25vw
+.gov--2
+  bottom: 0
+  right: 1.25vw
+.gov--3, .gov--4
+  display: none
+  width: 10vw
+.gov--3
+  top: 0
+.gov--4
+  bottom: 0
 .work__title
   font-size: 2vw
   line-height: 3vw
@@ -261,6 +300,10 @@ a, a:hover, a:active
   margin-bottom: 1.5vw
   border-radius: .57vw
   background-color: #2A41E8
+  transition: all .3s
+  cursor: pointer
+  &:hover
+    transform: translateY(-1.5%)
 .card__info
   padding: 2.1vw 2.1vw 1.56vw
   background-color: #fff
@@ -312,6 +355,9 @@ footer
   margin-right: 1.25vw
   img
     height: 1.2vw
+    transition: all .3s
+    &:hover
+      filter: brightness(200%)
 .medium
   padding: 1.3vw 7.3vw 1.9vw
   justify-content: space-between
@@ -320,10 +366,27 @@ footer
 .footer__menu
   ul
     margin-right: 3vw
+    a
+      position: relative
+    a:hover
+      color: #fff
+      &:after
+        width: 100%
+    a:after
+      content: ''
+      position: absolute
+      bottom: -5%
+      left: 0
+      height: 2px
+      width: 0%
+      transition: all .2s
+      background-color: #2A41E8
     &:last-child
       li:nth-child(2), li:nth-child(3)
         & a
           color: #808080
+          &:hover
+            color: #fff
 .form__title
   font-size: .93vw
   line-height: 1.56vw
@@ -356,12 +419,18 @@ footer
   height: 1.87vw
   padding: 0 1vw
   cursor: pointer
+  transition: all .3s
+  &:hover
+    background-color: #fff
+    & img
+      filter: invert(100%)
   img
     position: absolute
     top: 50%
     left: 50%
     transform: translate(-50%,-50%)
     width: .57vw
+    transition: all .3s
 .bott
   padding: 2.1vw 0 1.6vw
   text-align: center
@@ -420,7 +489,7 @@ footer
   right: 0
   height: 2px
   border-radius: 2px
-  background: #707070
+  background: #2A2A2A
 
 .cmn-toggle-switch span:before,
 .cmn-toggle-switch span:after 
@@ -430,7 +499,7 @@ footer
   width: 100%
   height: 2px
   border-radius: 2px
-  background-color: #707070
+  background-color: #2A2A2A
   content: "" 
 
 .cmn-toggle-switch span:before 
@@ -446,7 +515,7 @@ footer
  * down to center and transform into an "x".
  */
 .cmn-toggle-switch__htx 
-  background-color: #F2F2F2
+  background-color: #838383
 
 .cmn-toggle-switch__htx span 
   transition: background 0 0.3s 
@@ -464,7 +533,7 @@ footer
 
 /* active state, i.e. menu open */
 .cmn-toggle-switch__htx.active
-  background-color: #F2F2F2
+  background-color: #838383
 
 .cmn-toggle-switch__htx.active span
   background: none
